@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Phone Hunter API Project</title>
+    <link rel="shortcut icon" href="./img/fav.jpg" type="image/x-icon">
   </head>
   <body class="container">
 
@@ -19,7 +20,7 @@
      <!-- search section  -->
      <div class="text-center w-50 mx-auto">
         <input id="search-field" type="email" class="align-items-center form-control" name="" id="exampleFormControlInput1"> <br>
-       <div id="btn-search" class="btn btn-primary">Search</div> 
+       <div id="btn-search" class="btn btn-success">Search</div> 
     </div><br>
     <!-- card section -->
     <main class="container">
@@ -27,7 +28,8 @@
         <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
 
         </div>
-        <div class="mt-4 ">
+        <!-- no result fonund  -->
+        <div id="no-found-message" class="mt-4 d-none" >
           <h3 class="text-danger text-center">No result found. Please try again</h3>
         </div>
       </section>

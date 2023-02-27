@@ -13,7 +13,18 @@
 
     // display 6 phone only
     phones = phones.slice(0,6)
-    // card create js, 
+
+    // display no result 
+
+    const noPhone = document.getElementById('no-found-message');
+    if(phones.length === 0){
+        noPhone.classList.remove('d-none')
+    }
+    else{
+        noPhone.classList.add('d-none')
+    }
+
+    // display all phone 
     phones.forEach(phone => {
         const phoneDiv = document.createElement('div');
         phoneDiv.classList.add('col');
@@ -39,4 +50,4 @@ document.getElementById('btn-search').addEventListener('click',function(){
 })
 
 
-loadPhones();
+// loadPhones();
