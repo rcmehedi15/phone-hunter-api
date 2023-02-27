@@ -12,7 +12,14 @@
     phonesContainer.textContent = '';
 
     // display 6 phone only
-    phones = phones.slice(0,6)
+    const showAll = document.getElementById('show-all');
+    if(phones.length > 10){
+        phones = phones.slice(0,6);
+        showAll.classList.remove('d-none')
+    }
+    else{
+        showAll.classList.add('d-none')
+    }
 
     // display no result 
 
