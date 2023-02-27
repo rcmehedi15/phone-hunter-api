@@ -1,15 +1,18 @@
     // phones api loaded 
-const loadPhones = async(searchText) => {
+    const loadPhones = async(searchText) => {
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
     const res = await fetch(url);
     const data = await res.json();
     displayPhones(data.data);
 }
     // display phones 
-const displayPhones = phones => {
+    const displayPhones = phones => {
     const phonesContainer = document.getElementById('phones-container');
     // search value empty like this indevisual value show
     phonesContainer.textContent = '';
+
+    // display 6 phone only
+    phones = phones.slice(0,6)
     // card create js, 
     phones.forEach(phone => {
         const phoneDiv = document.createElement('div');
